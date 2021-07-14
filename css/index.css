@@ -1,0 +1,285 @@
+@charset "UTF-8";
+/*--------------- CSS Document 
+
+2021 coded by Natsuha Nakamura------------------------*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+	font-family: 'Noto Sans JP', sans-serif;
+	background: #F1F1F1;
+}
+
+body{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+#title{
+	/*border: 1px solid #111111;*/
+}
+
+#title{
+	text-align: center;
+	margin: 10px;
+	font-size: 3rem;
+}
+
+#title p {
+	font-size: 1rem;
+	color: #878787;
+}
+
+.nobus{
+	color: #FF0004;
+	font-size: 1.5rem;
+	text-align: center;
+	margin: 20px;
+}
+
+#box {
+	width: 110px;
+	text-align: center;
+	font-size: 1.3rem;
+	margin:0 auto;
+	padding: 0.2em;
+    border: solid 1.5px #000000;/*線*/
+    /*border-radius: 50px;/*角の丸み*/
+}
+
+#box span {
+    margin: 0; 
+    padding: 0;
+}
+
+/*========= 成安造形大学行きバス時刻のためのCSS ===============*/
+
+.slider{
+    margin:0 auto;
+	overflow: auto;
+	display: flex;
+	scrollbar-width: none;       /* Firefox 対応 */
+	/*border: 1px solid #111111;*/
+}
+
+.slider .slick-slide {
+	transform: scale(0.8);/*左右の画像のサイズを80%に*/
+	transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+	opacity: 0.5;/*透過50%*/
+}
+
+.slider .slick-slide.slick-center{
+	transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+	opacity: 1;/*透過なし*/
+}
+
+.toUniversity {
+	width: 50%;
+}
+
+.destination{
+	font-size: 14px;
+}
+
+.slider .toUniversity{
+	scroll-snap-align: center;
+	flex: none;
+	width: 30em;
+	height: 25em;
+	border-radius: 19px;
+	padding: 10px;
+	margin: 10px 4px 10px 4px;
+	text-align: center;
+	background: #ffffff;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	/*border: 1px solid #000000;*/
+}
+
+.departuretime {/*バス出発時刻*/
+	font-size: 2rem;
+}
+
+.slider .toUniversity .seian-after{/*バス出発時刻までの残り時間*/
+	font-size: 3rem;
+	font-weight:bold;
+}
+
+.slider　::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+        display:none;
+    }
+
+
+
+.rosenbus {
+	font-size: 10px;
+	color:#FF474A;
+}
+
+.warning{
+	position: relative;
+	top: 1rem;
+}
+
+.warning span{
+	font-size: 1.3rem;
+	position: relative;
+	bottom:0.35em;
+}
+
+.rideOn, .getOff{
+	text-align: left;
+	position:relative;
+	top: 1rem;
+}
+
+.rideOn{
+	top:2rem;
+}
+
+.rideOn span, .getOff span{
+	position: relative;
+	left: 0.5em;
+	bottom:0.35em;
+}
+
+/*---------------矢印の設定-------------------*/
+
+/*戻る、次へ矢印の位置*/
+.slickSeian-prev, .slickSeian-next {
+    position: absolute;/*絶対配置にする*/
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+	
+	padding: 10px;
+	
+	z-index: 10;
+	border: 1px solid #FF0004;
+}
+
+.slick-arrow{
+	position:absolute;
+	top: 20px;
+	
+	border: 1px solid #FF0004;
+}
+
+.slickSeian-prev {/*戻る矢印の位置と形状*/
+    top: 130px;
+	left: 1%;
+}
+
+.slickSeian-next {/*次へ矢印の位置と形状*/
+	top: 130px;
+    right: 2%;
+}
+
+/*ここからループさせないときの指定例*/
+.slickSeian-prev.slick-disabled,
+.slickSeian-next.slick-disabled {
+    opacity: .3;
+}
+ 
+.slickSeian-prev.slick-disabled:before,
+.slickSeian-next.slick-disabled:before {
+    opacity: 1;
+}
+
+/*========= 成安造形大学行きバス時刻のCSS ここまで ===============*/
+
+/*========= おごと温泉駅行きバス時刻のためのCSS ===============*/
+.sliderToOgoto{
+    margin: 0 auto;
+	overflow: auto;
+	display: flex;
+	scrollbar-width: none;       /* Firefox 対応 */
+}
+
+.sliderToOgoto .slick-slide {
+	transform: scale(0.8);/*左右の画像のサイズを80%に*/
+	transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+	opacity: 0.5;/*透過50%*/
+}
+
+.sliderToOgoto .slick-slide.slick-center{
+	transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+	opacity: 1;/*透過なし*/
+}
+
+ .sliderToOgoto .toStation{
+	scroll-snap-align: center;
+	flex: none;
+	width: 30em;
+	height: 275px;
+	border-radius: 19px;
+	padding: 8px;
+	margin: 10px 4px 10px 4px;
+	text-align: center;
+	background: #ffffff;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	/*border: 1px solid #000000;*/
+}
+
+.sliderToOgoto .toStation .rosenbus p {/*バス出発時刻*/
+	font-size: 2rem;
+}
+
+.sliderToOgoto .toStation .seian-after{/*バス出発時刻までの残り時間*/
+	font-size: 4rem;
+	font-weight:bold;
+}
+
+.sliderToOgoto　::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+        display:none;
+    }
+
+.toStation {
+	width: 50%;
+}
+
+
+.bustimeEnd{
+	scroll-snap-align: center;
+	flex: none;
+	width: 30em;
+	height: 25em;
+	border-radius: 19px;
+	padding: 10px;
+	text-align: center;
+	background: #ffffff;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	margin:0 auto;
+}
+
+.bustimeEnd p{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	font-size: 2rem;
+}
+
+
+/*----成安造形大学アクセスリンクとMedia labのリンク------*/
+#explain{
+	text-align: center;
+	margin:3em auto 0;
+}
+
+#explain span{
+	text-align: center;
+	font-size: 0.9rem;
+	color: #A4A4A4;
+}
+
+#lab {
+	margin:1.5em auto;
+	width: 6rem;
+}
