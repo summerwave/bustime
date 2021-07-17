@@ -30,9 +30,9 @@
 	<!-- 平日／土日 -->
 		<div id="box"><span data-type="service" data-weekday="平日" data-holiday="土・休日">土・休日</span>ダイヤ
     </div>
-	
+	<div id="bustime">
 	<!-- おごと温泉→成安造形大学　平日 -->
-	<div class="slider" id="to_univ_slider" >
+	<div class="slider" id="to_univ_slider" data-week="月,火,水,木,金">
 		<section class= "toUniversity dtimer" id="to_univ_section_template"><p class="destination">成安造形大学行き</p>
 				<p class="rosenbus">96系統 路線バス</p>
 				<p class="departuretime" data-type="to-seian" data-offset="0" data-format="hh:mm">00:00</p>
@@ -67,7 +67,7 @@
 	
 	
 	<!-- おごと温泉→成安造形大学　土曜日 -->
-	<div class="slider dtimer" id="to_univSat_slider" data-week="土">
+	<div class="slider dtimer" id="to_univSat_slider" data-week="土,日">
 		<section class= "toUniversity dtimer" id="to_univSat_section_template"><p class="destination">成安造形大学行き</p>
 				<p class="rosenbus">96系統 路線バス</p>
 				<p class="departuretime" data-type="to-seian" data-offset="0" data-format="hh:mm">00:00</p>
@@ -114,7 +114,7 @@
 	
 	
 	<!-- 成安造形大学→おごと温泉　土休日 -->
-	<div class="slider dtimer" id="to_stationSat_slider" data-week="土">
+	<div class="slider dtimer" id="to_stationSat_slider" data-week="土,日">
 		<section class= "toUniversity dtimer" id="to_stationSat_section_template"><p class="destination">おごと温泉駅行き</p>
 				<p class="rosenbus">路線バス</p>
 				<p class="departuretime" data-type="to-ogoto" data-offset="0" data-format="hh:mm">00:00</p>
@@ -130,6 +130,7 @@
 					<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3H6a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h4M16 17l5-5-5-5M19.8 12H9"/></svg><span>降車：おごと温泉駅バス乗り場</span>
 				</div>
 			</section>
+	</div>
 	</div>
 
 			
@@ -206,12 +207,6 @@
 	</g>
 </g>
 </svg></a></div>
-	
-	
-
-<h2>取得したデータ</h2>
-	<p>下記の位置情報を取得することができました。</p>
-	<dl id="result"></dl>
 	
 	
 	
