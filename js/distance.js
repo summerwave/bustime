@@ -53,10 +53,13 @@ var getSuccess = function(pos) {
 	var num = ans2;
 	if (num < 1504.517){   /*1504.517(m)は成安造形大学から雄琴温泉駅の直線距離*/
 		var uni_s = document.getElementById("to_univSat_slider");
-      var sta_s = document.getElementById("to_stationSat_slider");
+		var sta_s = document.getElementById("to_stationSat_slider");
+		var uni = document.getElementById("to_univ_slider");
+		var sta = document.getElementById("to_station_slider");
 		
 var bustimeElement = document.getElementById("bustime"); // id=bustimeの要素を取得
-bustimeElement.insertBefore(sta_s, uni_s); // bustime要素内のelem_tをelem_sの前に再挿入する
+bustimeElement.insertBefore(sta_s, uni_s); // bustime要素内のsta_sをuni_sの前に再挿入する
+bustimeElement.insertBefore(sta, uni);	// bustime要素内のstaをuniの前に再挿入する	
 	}
 };
 
