@@ -168,7 +168,7 @@ for (var i=0; i< r_to_stationSat_times.length; i++) {
 		speed: 300,//スライドのスピード。初期値は300。
 		slidesToShow: 4,//スライドを画面に4枚見せる
 		slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
-	 arrows: true,
+	    arrows: true,
 		prevArrow: '<div class="slickSeian-prev"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></div>',//矢印部分PreviewのHTMLを変更
 		nextArrow: '<div class="slickSeian-next"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>',//矢印部分NextのHTMLを変更
 		centerMode: true,//要素を中央ぞろえにする
