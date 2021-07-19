@@ -12,7 +12,7 @@
 html {
 	font-size: 10px;
 	font-family: 'Noto Sans JP', sans-serif;
-	background: #F1F1F1;
+	
 }
 
 body{
@@ -20,6 +20,13 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
+	background:#FBFBFB;
+}
+
+@media (prefers-color-scheme: dark){
+	body{
+		background:#1A1A1A;
+	}
 }
 
 #title{
@@ -37,6 +44,12 @@ body{
 	color: #878787;
 }
 
+@media (prefers-color-scheme: dark){
+	#title{
+		color:#FFFFFF;
+	}
+}
+
 .nobus{
 	color: #FF0004;
 	font-size: 1.5rem;
@@ -51,7 +64,14 @@ body{
 	margin:0 auto;
 	padding: 0.2em;
     border: solid 1.5px #000000;/*線*/
-    /*border-radius: 50px;/*角の丸み*/
+    border-radius: 50px;/*角の丸み*/
+}
+
+@media (prefers-color-scheme: dark){
+	#box{
+		color:#FFFFFF;
+		border: solid 1.5px #FFFFFF;/*線*/
+	}
 }
 
 #box span {
@@ -147,6 +167,10 @@ body{
 	position: relative;
 	left: 0.5em;
 	bottom:0.35em;
+}
+
+#to_univ_section_template{
+	background-color:#D5D5D5;
 }
 
 /*---------------矢印の設定-------------------*/
@@ -290,4 +314,11 @@ position: absolute;
 #lab {
 	margin:1.5em auto;
 	width: 6rem;
+}
+
+@media (prefers-color-scheme: dark){
+	#lab{
+		background: #FFFFFF;
+		border-radius: 50px;
+	}
 }
