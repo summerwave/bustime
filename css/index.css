@@ -156,9 +156,7 @@ body{
     position: absolute;/*絶対配置にする*/
     cursor: pointer;/*マウスカーソルを指マークに*/
     outline: none;/*クリックをしたら出てくる枠線を消す*/
-	
 	padding: 10px;
-	
 	z-index: 10;
 }
 
