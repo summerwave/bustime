@@ -160,14 +160,11 @@ body{
 	padding: 10px;
 	
 	z-index: 10;
-	border: 1px solid #FF0004;
 }
 
 .slick-arrow{
 	position:absolute;
 	top: 20px;
-	
-	border: 1px solid #FF0004;
 }
 
 .slickSeian-prev {/*戻る矢印の位置と形状*/
@@ -233,6 +230,11 @@ body{
 .sliderToOgoto .toStation .seian-after{/*バス出発時刻までの残り時間*/
 	font-size: 4rem;
 	font-weight:bold;
+position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
 }
 
 .sliderToOgoto　::-webkit-scrollbar {  /* Chrome, Safari 対応 */
@@ -264,6 +266,14 @@ body{
     margin-right: -50%;
     transform: translate(-50%, -50%);
 	font-size: 2rem;
+}
+
+.seian-after {
+	position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
 }
 
 
