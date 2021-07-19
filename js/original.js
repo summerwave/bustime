@@ -111,6 +111,21 @@ for (var i=0; i< r_to_station_times.length; i++) {
         timeElement.setAttribute("data-offset", i); // data-offsetをiに設定
      }
 	console.log(i);
+	
+	const countUp = () => {
+    // id=toschooltimenextの要素（タグ）を取得
+    var elementA = window.document.querySelectorAll('[data-type=to-ogoto]');
+
+    // id=toschooltimenextの要素のテキストを取得し、整数に変換する
+    var ogotoTime = parseInt(elementA.innerHTML); 
+
+    // leftTimeAの値が数値で、かつその数値が1以下の場合
+    if (ogotoTime!=NaN && ogotoTime <= 1) {
+         // 実行したい処理を記述する
+    }
+		console.log(ogotoTime);
+}
+setInterval(countUp, 1000); //1秒ごとににcountUpを実行する
     // 他、必要な処理
 }
 
@@ -153,8 +168,9 @@ for (var i=0; i< r_to_stationSat_times.length; i++) {
 		speed: 300,//スライドのスピード。初期値は300。
 		slidesToShow: 4,//スライドを画面に4枚見せる
 		slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
-		prevArrow: '<div class="slickSeian-prev"></div>',//矢印部分PreviewのHTMLを変更
-		nextArrow: '<div class="slickSeian-next"></div>',//矢印部分NextのHTMLを変更
+	 arrows: true,
+		prevArrow: '<div class="slickSeian-prev"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></div>',//矢印部分PreviewのHTMLを変更
+		nextArrow: '<div class="slickSeian-next"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>',//矢印部分NextのHTMLを変更
 		centerMode: true,//要素を中央ぞろえにする
 		variableWidth: true,//幅の違う画像の高さを揃えて表示
 		dots: false,//下部ドットナビゲーションの表示
@@ -277,40 +293,3 @@ document.addEventListener("DOMContentLoaded", function(){
     setTimeout(displayAll, 1000);
 }());
 });
-
-
-/*===============位置情報を取得するjs========================
-
-  if (navigator.geolocation) {
-        // 現在の位置情報取得を実施
-        navigator.geolocation.getCurrentPosition(
-        // 位置情報取得成功時
-        function (position) {
-                var location ="<li>"+"Latitude：" + position.coords.latitude + "</li>"; //緯度
-                location += "<li>"+"longitude：" + position.coords.longitude + "</li>"; //経度
-                location += "<li>"+"altitude：" + position.coords.altitude + " m</li>"; //高度
-                location += "<li>"+"accuracy：" + position.coords.accuracy + " m</li>"; //緯度・経度の誤差
-                location += "<li>"+"altitudeAccuracy：" + position.coords.altitudeAccuracy + " m</li>"; //高度の誤差
-                location += "<li>"+"heading：" + position.coords.heading + "</li>"; //方向 0-360
-                location += "<li>"+"speed：" + position.coords.speed + " m/sec</li>"; //速度
-                document.getElementById("location").innerHTML = location;
-        },
-        // 位置情報取得失敗時
-        function (error) {
-                switch(error.code)
-                  {
-                    case 1:
-                      var location = "<li>位置情報の利用が許可されていません</li>";
-                      break;
-                    case 2:
-                      var location = "<li>デバイスの位置が判定できませんでした</li>";
-                      break;
-                    case 3:
-                      var location = "<li>タイムアウトが発生しました</li>";
-                      break;
-                  }
-                document.getElementById("location").innerHTML = location;
-        });
-    } else {
-        window.alert("<li>Geolocation APIが搭載されていないブラウザです。</li>");
-    }*/
