@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>スクールバス時刻表 |成安造形大学|</title>
+		<link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/icon-192x192.png">
+		<!--font-->
+		<link rel="preconnect" href="https://fonts.gstatic.com"> 
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+		<!--css-->
+		<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+		<link rel="stylesheet" href="css/index.css" type="text/css" />
+		<!--js-->
+		<script src="js/bustime.js"></script>
+	</head>
+	
+<body>
+	
+	<div id="title"><strong>School Bus Timetable </strong>
+	  <p>Seian University of Art and Design</p>
+	</div>
+	
+<!--日曜日のみ表示する文章data-sh="13" data-sm="30" data-eh="13" data-em="30"-->
+	
+<p class="nobus dtimer" data-week="日">本日スクールバスの運行はありません</p>
+	
+		<!-- 現在の時刻 
+		現在の時刻：
+		<span data-type="clock" data-format="hh:mm:ss">00:00:00</span><br />-->
+	
+	<!-- 平日／土日 -->
+		<div id="box"><span data-type="service" data-weekday="平日" data-holiday="土・休日">土・休日</span>ダイヤ
+    </div>
+	<div id="bustime">
+	<!-- おごと温泉→成安造形大学　平日 -->
+	<div class="slider dtimer" id="to_univ_slider" data-week="月,火,水,木,金" data-etime="21:51">
+		<section class= "toUniversity dtimer" id="to_univ_section_template"><p class="destination">成安造形大学行き</p>
+				<!--<p class="rosenbus">96系統 路線バス</p>-->
+				<p class="departuretime" data-type="to-seian" data-offset="0" data-format="hh:mm">00:00</p>
+				<p class="seian-after" data-type="to-seian" data-offset="0" data-format="HHMMSS秒後">00時間00分00秒</p>
+				<div class="warning dtimer" data-stime="19:12">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+					<span>降車時に学生証の提示が必須です</span>
+				</div>
+				<!--<div class="rideOn">
+					<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13.8 12H3"/></svg><span>乗車：おごと温泉駅2番のりば</span>
+				</div>
+				<div class="getOff">
+					<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3H6a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h4M16 17l5-5-5-5M19.8 12H9"/></svg><span>降車：大学正門前</span>
+				</div>-->
+			</section>
+		</div>
+	
+	<section class="bustimeEnd dtimer" data-stime="21:51" data-week="月,火,水,木,金"><p>成安造形大学行き<br>本日のバスは終了しました。</p>
+			</section>
+	<section class="bustimeEnd dtimer" data-stime="20:38" data-week="土">
+		<p>成安造形大学行き<br>
+				本日のバスは終了しました。</p>
+			</section>
+	<!--戻る
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                                -->
+	
+	<!--次へ
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+-->
+	
+	<!-- おごと温泉→成安造形大学　土曜日 -->
+	<div class="slider dtimer" id="to_univSat_slider" data-week="土,日">
+		<section class= "toUniversity dtimer" id="to_univSat_section_template"><p class="destination">成安造形大学行き</p>
+				<!-- <p class="rosenbus">96系統 路線バス</p> -->
+				<p class="departuretime" data-type="to-seian" data-offset="0" data-format="hh:mm">00:00</p>
+				<p class="seian-after" data-type="to-seian" data-offset="0" data-format="HHMMSS秒後">00時間00分00秒</p>
+				<div class="warning dtimer" data-stime="19:13">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+					<span>降車時に学生証の提示が必須です</span>
+				</div>
+				<!--<div class="rideOn">
+					<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13.8 12H3"/></svg><span>乗車：おごと温泉駅2番のりば</span>
+				</div>
+				<div class="getOff">
+					<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3H6a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h4M16 17l5-5-5-5M19.8 12H9"/></svg><span>降車：大学正門前</span>
+				</div>-->
+			</section>
+	</div>
+	
+	<section class="bustimeEnd dtimer" data-stime="21:59" data-week="月,火,水,木,金"><p>おごと温泉駅行き
+		<br>本日のバスは終了しました。</p>
+			</section>
+	<section class="bustimeEnd dtimer" data-stime="20:46" data-week="土"><p>おごと温泉駅行き
+				<br>本日のバスは終了しました。</p>
+			</section>
+	
+	<!-- 成安造形大学→おごと温泉　平日 -->
+	<div class="slider dtimer" id="to_station_slider" data-week="月,火,水,木,金">
+		<section class= "toUniversity dtimer" id="to_station_section_template"><p class="destination">おごと温泉駅行き</p>
+				<!--<p class="rosenbus">路線バス</p>-->
+				<p class="departuretime" data-type="to-ogoto" data-offset="0" data-format="hh:mm">00:00</p>
+				<p class="seian-after" data-type="to-ogoto" data-offset="0" data-format="HHMMSS秒後">00時間00分00秒</p>
+				<div class="warning dtimer" data-stime="19:20">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+					<span class="pass">降車時に学生証の提示が必須です</span>
+				</div>
+				<!--<div class="rideOn">
+					<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13.8 12H3"/></svg><span>乗車：大学正門前</span>
+				</div>
+				<div class="getOff">
+					<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3H6a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h4M16 17l5-5-5-5M19.8 12H9"/></svg><span>降車：おごと温泉駅バス乗り場</span>
+				</div>-->
+			</section>
+	</div>
+	
+	
+	
+	<!-- 成安造形大学→おごと温泉　土休日 -->
+	<div class="slider dtimer" id="to_stationSat_slider" data-week="土,日">
+		<section class= "toUniversity dtimer" id="to_stationSat_section_template"><p class="destination">おごと温泉駅行き</p>
+				<!--<p class="rosenbus">路線バス</p>-->
+				<p class="departuretime" data-type="to-ogoto" data-offset="0" data-format="hh:mm">00:00</p>
+				<p class="seian-after" data-type="to-ogoto" data-offset="0" data-format="HHMMSS秒後">00時間00分00秒</p>
+				<div class="warning dtimer" data-stime="19:21">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+					<span>降車時に学生証の提示が必須です</span>
+				</div>
+				<!--<div class="rideOn">
+					<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13.8 12H3"/></svg><span>乗車：大学正門前</span>
+				</div>
+				<div class="getOff">
+					<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3H6a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h4M16 17l5-5-5-5M19.8 12H9"/></svg><span>降車：おごと温泉駅バス乗り場</span>
+				</div>-->
+			</section>
+	</div>
+	</div>
+
+			
+
+	
+	<div id="explain"><span>スクールバス運行時刻は2021年4月12日現在の情報を表示しています。</span>
+	<br/><span>詳しい情報は<a href="http://www.seian.ac.jp/access/">http://www.seian.ac.jp/access/</a>をご覧ください。</span>
+	</div>
+	
+	
+<!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<div id="lab"><a href="http://mediadesignlab.net"><svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 216.2 216.8" style="enable-background:new 0 0 216.2 216.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#231815;}
+	.st1{fill:#9E9E9F;
+</style>
+<g id="レイヤー_2_1_">
+	<g id="レイヤー_1-2">
+		<path class="st0" d="M45.2,179.2v-9.3l-3.2,6.8h-1.6l-3.3-6.8v9.3H35v-13.8h2.1l4,8.6l4-8.6h2.1v13.9L45.2,179.2z"/>
+		<path class="st0" d="M51.3,174.8c0,1.7,0.9,2.8,2.5,2.8c0.9,0,1.8-0.3,2.4-1l1.3,1.2c-0.9,1.1-2.3,1.6-3.7,1.5
+			c-2.5,0-4.4-1.3-4.4-5.1c0-3.2,1.7-5,4.2-5s4.2,1.9,4.2,4.8v0.9L51.3,174.8z M55.5,172.1c-0.3-0.8-1.1-1.3-2-1.2
+			c-0.9,0-1.7,0.5-2,1.2c-0.2,0.4-0.3,0.9-0.2,1.3h4.4C55.7,173,55.6,172.5,55.5,172.1z"/>
+		<path class="st0" d="M65.6,179.2v-1c-0.6,0.8-1.6,1.2-2.6,1.2c-0.9,0-1.8-0.3-2.4-0.9c-1-1-1.1-2.7-1.1-4.2s0.1-3.2,1.1-4.2
+			c0.6-0.6,1.5-0.9,2.4-0.9c1-0.1,2,0.3,2.6,1.1v-5h2v13.9L65.6,179.2z M63.5,171c-1.8,0-2.1,1.5-2.1,3.3s0.3,3.3,2.1,3.3
+			c1.8,0,2-1.5,2-3.3S65.3,171,63.5,171z"/>
+		<path class="st0" d="M70.2,167.4v-2.1h2.1v2.1H70.2z M70.2,179.2v-9.9h2v9.9H70.2z"/>
+		<path class="st0" d="M80.4,179.2v-0.9c-0.7,0.7-1.6,1.1-2.6,1c-1,0.1-1.9-0.2-2.6-0.9c-0.5-0.6-0.8-1.3-0.8-2.1
+			c0-1.6,1.1-2.8,3.4-2.8h2.6v-0.7c0-1.2-0.6-1.8-2.2-1.8c-0.8-0.1-1.7,0.3-2.2,1l-1.3-1.2c0.9-1,2.2-1.6,3.5-1.4
+			c2.7,0,4.1,1.1,4.1,3.4v6.6L80.4,179.2z M80.4,174.8H78c-1.2,0-1.8,0.5-1.8,1.4s0.6,1.4,1.8,1.4c0.7,0.1,1.3-0.1,1.8-0.6
+			c0.3-0.4,0.5-0.9,0.4-1.5L80.4,174.8z"/>
+		<path class="st0" d="M98.7,177.9c-1,0.9-2.3,1.4-3.6,1.3h-4.9v-13.8h4.9c1.3-0.1,2.6,0.4,3.6,1.3c1.5,1.5,1.4,3.5,1.4,5.5
+			S100.2,176.4,98.7,177.9z M97.3,168.1c-0.6-0.6-1.5-1-2.3-0.9h-2.6v10.1h2.6c0.9,0,1.7-0.3,2.3-0.9c0.7-0.8,0.7-2.3,0.7-4.2
+			S98,168.9,97.3,168.1z"/>
+		<path class="st0" d="M104.1,174.8c0,1.7,0.9,2.8,2.5,2.8c0.9,0,1.8-0.3,2.4-1l1.3,1.2c-0.9,1.1-2.3,1.6-3.7,1.5
+			c-2.5,0-4.4-1.3-4.4-5.1c0-3.2,1.7-5,4.2-5s4.2,1.9,4.2,4.8v0.9L104.1,174.8z M108.2,172.1c-0.3-0.8-1.1-1.3-2-1.2
+			c-0.9,0-1.7,0.4-2,1.2c-0.2,0.4-0.3,0.9-0.2,1.3h4.4C108.4,173,108.4,172.5,108.2,172.1z"/>
+		<path class="st0" d="M115.9,179.3c-1.5,0.1-3-0.4-4.1-1.4l1.3-1.3c0.8,0.7,1.8,1.1,2.8,1c1.2,0,2.2-0.4,2.2-1.4
+			c0-0.6-0.4-1.1-1.3-1.2l-1.6-0.1c-1.8-0.2-2.9-1-2.9-2.7c0-1.9,1.7-3,3.7-3c1.3-0.1,2.6,0.3,3.7,1.1l-1.2,1.3
+			c-0.7-0.5-1.6-0.8-2.4-0.7c-1.2,0-1.8,0.5-1.8,1.3c0,0.6,0.3,1,1.4,1.1l1.6,0.1c1.8,0.2,2.9,1,2.9,2.8
+			C120,178.2,118.2,179.3,115.9,179.3z"/>
+		<path class="st0" d="M122.3,167.4v-2.1h2.1v2.1H122.3z M122.4,179.2v-9.9h2v9.9H122.4z"/>
+		<path class="st0" d="M130.1,183.3c-1.3,0.1-2.6-0.4-3.5-1.3l1.3-1.3c0.6,0.6,1.3,0.9,2.1,0.9c1.2,0.1,2.3-0.9,2.3-2.1
+			c0-0.1,0-0.3,0-0.4v-1.3c-0.6,0.8-1.6,1.2-2.6,1.1c-0.9,0-1.7-0.3-2.3-0.9c-1-0.9-1.1-2.3-1.1-4s0.2-3.1,1.1-4
+			c0.6-0.6,1.5-0.9,2.4-0.9c1-0.1,2,0.4,2.6,1.2v-1.1h1.9v9.8c0.1,2.2-1.6,4.1-3.8,4.2C130.3,183.3,130.2,183.3,130.1,183.3z
+			 M130.3,171c-1.8,0-2,1.5-2,3.1s0.2,3.1,2,3.1s2-1.5,2-3.1S132.1,171,130.3,171z"/>
+		<path class="st0" d="M142.3,179.2v-6c0-1.5-0.9-2.2-2-2.2c-1.1,0-2,0.8-2.1,1.9c0,0.1,0,0.2,0,0.3v6h-2v-9.9h1.9v1
+			c0.7-0.7,1.6-1.1,2.6-1.1c0.9,0,1.8,0.3,2.4,0.9c0.7,0.7,1.1,1.7,1,2.8v6.3L142.3,179.2z"/>
+		<path class="st0" d="M152.2,179.2v-13.8h2.1v12h6.7v1.9L152.2,179.2z"/>
+		<path class="st0" d="M168.9,179.2v-0.9c-0.7,0.7-1.6,1.1-2.6,1c-1,0.1-1.9-0.2-2.7-0.9c-0.5-0.6-0.8-1.3-0.8-2.1
+			c0-1.6,1.1-2.8,3.4-2.8h2.6v-0.7c0-1.2-0.6-1.8-2.2-1.8c-0.9-0.1-1.7,0.3-2.2,1l-1.3-1.2c0.9-1,2.2-1.6,3.5-1.4
+			c2.7,0,4.1,1.1,4.1,3.4v6.6L168.9,179.2z M168.9,174.8h-2.4c-1.2,0-1.8,0.5-1.8,1.4s0.6,1.4,1.8,1.4c0.7,0.1,1.3-0.1,1.9-0.6
+			c0.3-0.4,0.5-0.9,0.4-1.5L168.9,174.8z"/>
+		<path class="st0" d="M180,178.4c-0.7,0.6-1.5,0.9-2.4,0.9c-1,0.1-2-0.4-2.6-1.2v1h-2v-13.8h2v5c0.6-0.8,1.6-1.2,2.6-1.1
+			c0.9,0,1.7,0.3,2.4,0.9c1,1,1.1,2.7,1.1,4.2S181,177.4,180,178.4z M177.1,171c-1.8,0-2.1,1.5-2.1,3.3s0.3,3.3,2.1,3.3s2-1.5,2-3.3
+			S178.9,171,177.1,171z"/>
+		<polyline class="st0" points="94.9,75.2 63,50 63,53 63,53 63,53 63,64.7 62.9,64.7 63,64.7 62.9,131 71.2,133.3 76.2,128.7 
+			76.1,76.2 95.5,90.1 138.1,68.1 138.1,146.5 147.9,148.6 153.2,143.9 153.2,45.2 		"/>
+		<rect x="41.7" y="101.1" class="st1" width="132.9" height="5.1"/>
+		<rect x="138.1" y="71.2" class="st0" width="15.2" height="59.9"/>
+	</g>
+</g>
+</svg></a></div>
+	
+	
+	
+	<!--JS-->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+
+	<!--自作のJS-->
+	<script src="js/original.js"></script>
+	<script src="js/distance.js"></script>
+	
+	
+	</body>
+
+</html>
